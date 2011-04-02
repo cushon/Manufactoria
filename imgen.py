@@ -12,5 +12,5 @@ while s:
   lvl = re.search('lvl=([0-9]+)', url).group(0)[4:]
   print "Generating {0}".format(lvl)
   image = urllib2.urlopen(url)
-  with open("{0}_{1}".format(lvl, s.pop(0).replace('\w*', '_')), 'w+') as f:
+  with open("{0}_{1}.png".format(lvl, s.pop(0).replace(' ', '_')), 'w+') as f:
     f.write(image.read())
